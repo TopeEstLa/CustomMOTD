@@ -50,12 +50,17 @@ if is_stretch; then
   echo -e ""
   echo -e "You use Debian 9"
   echo -e ""
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install neofetch
+  ln -n /usr/bin/neofetch /etc/update-motd.d
 
 elif is_buster; then
   echo -e ""
   echo -e "You use Debian 10"
   echo -e ""
-
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install neofetch
+  ln -n /usr/bin/neofetch /etc/update-motd.d
 
 elif is_ubuntu16; then
   echo -e ""
@@ -63,13 +68,11 @@ elif is_ubuntu16; then
   echo -e ""
 
 elif is_ubuntu18; then
-
   echo -e ""
   echo -e "You use Ubuntu 18.04 LTS"
   echo -e ""
 
 elif is_ubuntu20; then
-
   echo -e ""
   echo -e "You use Ubuntu 20 LTS"
   echo -e ""
